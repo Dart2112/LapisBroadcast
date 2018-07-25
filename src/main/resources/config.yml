@@ -1,15 +1,20 @@
-PrimaryColor: '&x'
-SecondaryColor: '&x'
+# You can use &p or &s that will be replaced with these when the messages are sent
+PrimaryColor: '&9'
+SecondaryColor: '&6'
 
+# The prefix to be sent in front of every message
 Prefix: "&s[&pLapisBroadcast&s] "
 
 #Time between messages in minutes
-Delay: 5
+Delay: 2
 
+# If true the messages will be send in a random order, if false they will be sent top to bottom then repeat
 RandomOrder: false
 
+# Note that this will not fill in Placeholder API variables as they require a player
 ConsoleLog: false
 
+# These are the messages that will be sent to players, here is where you can use Placeholder API tags
 Messages:
   - "&pThis is a default message in a broadcast plugin"
   - "&pThis is another message"

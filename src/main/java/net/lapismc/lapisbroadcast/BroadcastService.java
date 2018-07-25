@@ -40,11 +40,11 @@ class BroadcastService {
     }
 
     private void startRunnable() {
-        Long delay = plugin.getConfig().getLong("Delay") * 20 * 60;
+        Double delay = plugin.getConfig().getDouble("Delay") * 20 * 60;
         if (taskId != null) {
             Bukkit.getScheduler().cancelTask(taskId);
         }
-        taskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(plugin, getTask(), delay, delay);
+        taskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(plugin, getTask(), delay.longValue(), delay.longValue());
     }
 
     private Runnable getTask() {
@@ -61,6 +61,9 @@ class BroadcastService {
             }
             message = format(message);
             String broadcast = prefix + message;
+            if (plugin.getConfig().getBoolean("ConsoleLog")) {
+                plugin.getLogger().info(broadcast);
+            }
             for (OfflinePlayer op : Bukkit.getOfflinePlayers()) {
                 if (op.isOnline()) {
                     if (Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) {
@@ -68,9 +71,6 @@ class BroadcastService {
                     }
                     op.getPlayer().sendMessage(broadcast);
                 }
-            }
-            if (plugin.getConfig().getBoolean("ConsoleLog")) {
-                plugin.getLogger().info(broadcast);
             }
         };
     }

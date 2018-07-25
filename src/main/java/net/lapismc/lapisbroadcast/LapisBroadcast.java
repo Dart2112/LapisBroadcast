@@ -10,10 +10,12 @@ public final class LapisBroadcast extends JavaPlugin {
     public void onEnable() {
         service = new BroadcastService(this);
         new LapisBroadcastFileWatcher(this);
+        getLogger().info(getDescription().getName() + " v." + getDescription().getVersion() + " has been enabled");
     }
 
     @Override
     public void onDisable() {
         service.stopService();
+        getLogger().info(getDescription().getName() + " has been disabled");
     }
 }

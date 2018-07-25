@@ -20,7 +20,8 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
 
-import static java.nio.file.StandardWatchEventKinds.*;
+import static java.nio.file.StandardWatchEventKinds.ENTRY_DELETE;
+import static java.nio.file.StandardWatchEventKinds.ENTRY_MODIFY;
 
 public class LapisBroadcastFileWatcher implements Runnable {
 
@@ -35,7 +36,7 @@ public class LapisBroadcastFileWatcher implements Runnable {
         try {
             WatchService watcher = FileSystems.getDefault().newWatchService();
             Path dir = Paths.get(plugin.getDataFolder().getAbsolutePath());
-            dir.register(watcher, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY);
+            dir.register(watcher, ENTRY_DELETE, ENTRY_MODIFY);
             plugin.getLogger().info("LapisBroadcast's file watcher started!");
             WatchKey key = watcher.take();
             while (key != null) {
