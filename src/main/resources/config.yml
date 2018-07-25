@@ -1,0 +1,15 @@
+PrimaryColor: '&x'
+SecondaryColor: '&x'
+
+Prefix: "&s[&pLapisBroadcast&s] "
+
+#Time between messages in minutes
+Delay: 5
+
+RandomOrder: false
+
+ConsoleLog: false
+
+Messages:
+  - "&pThis is a default message in a broadcast plugin"
+  - "&pThis is another message"

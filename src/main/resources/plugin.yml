@@ -1,0 +1,4 @@
+name: LapisBroadcast
+version: ${project.version}
+main: net.lapismc.lapisbroadcast.LapisBroadcast
+authors: [Dart2112]
