@@ -1,5 +1,6 @@
 package net.lapismc.lapisbroadcast;
 
+import net.lapismc.lapisbroadcast.utils.PlaceholderAPIHook;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
@@ -8,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-class BroadcastService {
+public class BroadcastService {
 
     private String prefix;
     private Integer taskId;
@@ -23,7 +24,7 @@ class BroadcastService {
         startRunnable();
     }
 
-    void reloadService() {
+    public void reloadService() {
         loadMessages();
         startRunnable();
     }
@@ -35,7 +36,7 @@ class BroadcastService {
     }
 
     private void loadMessages() {
-        prefix = format(plugin.getConfig().getString("Prefix"));
+        prefix = colorize(plugin.getConfig().getString("Prefix"));
         messages = plugin.getConfig().getStringList("Messages");
     }
 
@@ -49,6 +50,8 @@ class BroadcastService {
 
     private Runnable getTask() {
         return () -> {
+            if (messages.size() == 0)
+                return;
             String message;
             if (plugin.getConfig().getBoolean("RandomOrder")) {
                 message = messages.get(random.nextInt(messages.size()));
@@ -59,10 +62,10 @@ class BroadcastService {
                 message = messages.get(messageIndex);
                 messageIndex++;
             }
-            message = format(message);
+            message = colorize(message);
             String broadcast = prefix + message;
             if (plugin.getConfig().getBoolean("ConsoleLog")) {
-                plugin.getLogger().info(broadcast);
+                Bukkit.getLogger().info(broadcast);
             }
             for (OfflinePlayer op : Bukkit.getOfflinePlayers()) {
                 if (op.isOnline()) {
@@ -75,7 +78,7 @@ class BroadcastService {
         };
     }
 
-    private String format(String s) {
+    private String colorize(String s) {
         String primaryColor = plugin.getConfig().getString("PrimaryColor", ChatColor.BLUE.toString());
         String secondaryColor = plugin.getConfig().getString("SecondaryColor", ChatColor.GOLD.toString());
         String message = s.replace("&p", primaryColor).replace("&s", secondaryColor);

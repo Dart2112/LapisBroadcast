@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-package net.lapismc.lapisbroadcast;
+package net.lapismc.lapisbroadcast.utils;
+
+import net.lapismc.lapisbroadcast.LapisBroadcast;
 
 import java.io.File;
 import java.io.IOException;
@@ -27,7 +29,7 @@ public class LapisBroadcastFileWatcher implements Runnable {
 
     private LapisBroadcast plugin;
 
-    LapisBroadcastFileWatcher(LapisBroadcast p) {
+    public LapisBroadcastFileWatcher(LapisBroadcast p) {
         plugin = p;
     }
 

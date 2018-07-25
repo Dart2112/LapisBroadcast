@@ -5,7 +5,7 @@ SecondaryColor: '&6'
 # The prefix to be sent in front of every message
 Prefix: "&s[&pLapisBroadcast&s] "
 
-#Time between messages in minutes
+#Time between messages in minutes, this can be a decimal like 0.1 for every 6 seconds
 Delay: 2
 
 # If true the messages will be send in a random order, if false they will be sent top to bottom then repeat
