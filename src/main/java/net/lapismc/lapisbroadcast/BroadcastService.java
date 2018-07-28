@@ -45,11 +45,12 @@ public class BroadcastService {
         if (taskId != null) {
             Bukkit.getScheduler().cancelTask(taskId);
         }
-        taskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(plugin, getTask(), delay.longValue(), delay.longValue());
+        taskId = Bukkit.getScheduler().runTaskTimerAsynchronously(plugin, getTask(), delay.longValue(), delay.longValue()).getTaskId();
     }
 
     private Runnable getTask() {
         return () -> {
+            waitForPlayers();
             if (messages.size() == 0)
                 return;
             String message;
@@ -76,6 +77,17 @@ public class BroadcastService {
                 }
             }
         };
+    }
+
+    private void waitForPlayers() {
+        if (plugin.getConfig().getBoolean("WaitForPlayers")) {
+            while (Bukkit.getOnlinePlayers().size() == 0) {
+                try {
+                    wait(1000 * 5);
+                } catch (InterruptedException ignored) {
+                }
+            }
+        }
     }
 
     private String colorize(String s) {
