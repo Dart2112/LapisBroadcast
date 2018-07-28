@@ -5,7 +5,7 @@ SecondaryColor: '&6'
 # The prefix to be sent in front of every message
 Prefix: "&s[&pLapisBroadcast&s] "
 
-#Time between messages in minutes, this can be a decimal like 0.1 for every 6 seconds
+#Time between messages in minutes, this can be a decimal like 0.1 for every 6 seconds. It is only precise to the second
 Delay: 2
 
 # Should the plugin pause announcements while no players are online
@@ -21,3 +21,4 @@ ConsoleLog: false
 Messages:
   - "&pThis is a default message in a broadcast plugin"
   - "&pThis is another message"
+  - "&pThis is yet another message"

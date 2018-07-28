@@ -8,11 +8,15 @@ import org.bukkit.OfflinePlayer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 
 public class BroadcastService {
 
     private String prefix;
-    private Integer taskId;
+    private ScheduledFuture task;
     private LapisBroadcast plugin;
     private Integer messageIndex = 0;
     private List<String> messages = new ArrayList<>();
@@ -24,33 +28,16 @@ public class BroadcastService {
         startRunnable();
     }
 
-    public void reloadService() {
-        loadMessages();
-        startRunnable();
-    }
-
-    void stopService() {
-        if (taskId != null) {
-            Bukkit.getScheduler().cancelTask(taskId);
-        }
-    }
-
-    private void loadMessages() {
-        prefix = colorize(plugin.getConfig().getString("Prefix"));
-        messages = plugin.getConfig().getStringList("Messages");
-    }
-
-    private void startRunnable() {
-        Double delay = plugin.getConfig().getDouble("Delay") * 20 * 60;
-        if (taskId != null) {
-            Bukkit.getScheduler().cancelTask(taskId);
-        }
-        taskId = Bukkit.getScheduler().runTaskTimerAsynchronously(plugin, getTask(), delay.longValue(), delay.longValue()).getTaskId();
-    }
-
-    private Runnable getTask() {
+    private Runnable getRunnable() {
         return () -> {
-            waitForPlayers(Thread.currentThread());
+            if (plugin.getConfig().getBoolean("WaitForPlayers")) {
+                while (Bukkit.getOnlinePlayers().size() == 0) {
+                    try {
+                        Thread.sleep(1000 * 2);
+                    } catch (InterruptedException ignored) {
+                    }
+                }
+            }
             if (messages.size() == 0)
                 return;
             String message;
@@ -79,15 +66,29 @@ public class BroadcastService {
         };
     }
 
-    private void waitForPlayers(Thread thread) {
-        if (plugin.getConfig().getBoolean("WaitForPlayers")) {
-            while (Bukkit.getOnlinePlayers().size() == 0) {
-                try {
-                    thread.wait(1000 * 5);
-                } catch (InterruptedException ignored) {
-                }
-            }
+    public void reloadService() {
+        loadMessages();
+        startRunnable();
+    }
+
+    void stopService() {
+        if (task != null) {
+            task.cancel(false);
         }
+    }
+
+    private void loadMessages() {
+        prefix = colorize(plugin.getConfig().getString("Prefix"));
+        messages = plugin.getConfig().getStringList("Messages");
+    }
+
+    private void startRunnable() {
+        Double delay = plugin.getConfig().getDouble("Delay", 2) * 60;
+        if (task != null) {
+            task.cancel(false);
+        }
+        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+        task = scheduler.scheduleWithFixedDelay(getRunnable(), 0L, delay.longValue(), TimeUnit.SECONDS);
     }
 
     private String colorize(String s) {
