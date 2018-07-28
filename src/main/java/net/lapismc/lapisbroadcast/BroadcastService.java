@@ -50,7 +50,7 @@ public class BroadcastService {
 
     private Runnable getTask() {
         return () -> {
-            waitForPlayers();
+            waitForPlayers(Thread.currentThread());
             if (messages.size() == 0)
                 return;
             String message;
@@ -79,11 +79,11 @@ public class BroadcastService {
         };
     }
 
-    private void waitForPlayers() {
+    private void waitForPlayers(Thread thread) {
         if (plugin.getConfig().getBoolean("WaitForPlayers")) {
             while (Bukkit.getOnlinePlayers().size() == 0) {
                 try {
-                    wait(1000 * 5);
+                    thread.wait(1000 * 5);
                 } catch (InterruptedException ignored) {
                 }
             }
