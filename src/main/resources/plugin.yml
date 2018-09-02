@@ -1,5 +1,6 @@
 name: LapisBroadcast
 version: ${project.version}
 main: net.lapismc.lapisbroadcast.LapisBroadcast
+api-version: 1.13
 authors: [Dart2112]
 softdepend: [PlaceholderAPI]

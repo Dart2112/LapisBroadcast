@@ -18,6 +18,7 @@ public class BroadcastService {
     private String prefix;
     private ScheduledFuture task;
     private LapisBroadcast plugin;
+    private boolean waitingForPlayers = false;
     private Integer messageIndex = 0;
     private List<String> messages = new ArrayList<>();
     private Random random = new Random(System.currentTimeMillis());
@@ -30,12 +31,14 @@ public class BroadcastService {
 
     private Runnable getRunnable() {
         return () -> {
-            if (plugin.getConfig().getBoolean("WaitForPlayers")) {
-                while (Bukkit.getOnlinePlayers().size() == 0) {
-                    try {
-                        Thread.sleep(1000 * 2);
-                    } catch (InterruptedException ignored) {
-                    }
+            while (Bukkit.getOnlinePlayers().size() == 0 && plugin.getConfig().getBoolean("WaitForPlayers")) {
+                if (waitingForPlayers) {
+                    return;
+                }
+                waitingForPlayers = true;
+                try {
+                    Thread.sleep(1000 * 2);
+                } catch (InterruptedException ignored) {
                 }
             }
             if (messages.size() == 0)
@@ -53,7 +56,11 @@ public class BroadcastService {
             message = colorize(message);
             String broadcast = prefix + message;
             if (plugin.getConfig().getBoolean("ConsoleLog")) {
-                Bukkit.getLogger().info(broadcast);
+                String consoleMessage = broadcast;
+                if (plugin.getConfig().getBoolean("StripColor")) {
+                    consoleMessage = ChatColor.stripColor(broadcast);
+                }
+                Bukkit.getLogger().info(consoleMessage);
             }
             for (OfflinePlayer op : Bukkit.getOfflinePlayers()) {
                 if (op.isOnline()) {
@@ -63,6 +70,7 @@ public class BroadcastService {
                     op.getPlayer().sendMessage(broadcast);
                 }
             }
+            waitingForPlayers = false;
         };
     }
 
@@ -78,8 +86,8 @@ public class BroadcastService {
     }
 
     private void loadMessages() {
-        prefix = colorize(plugin.getConfig().getString("Prefix"));
-        messages = plugin.getConfig().getStringList("Messages");
+        prefix = plugin.config.getMessage("Prefix");
+        messages = plugin.config.getMessages().getStringList("Messages");
     }
 
     private void startRunnable() {
@@ -92,8 +100,8 @@ public class BroadcastService {
     }
 
     private String colorize(String s) {
-        String primaryColor = plugin.getConfig().getString("PrimaryColor", ChatColor.BLUE.toString());
-        String secondaryColor = plugin.getConfig().getString("SecondaryColor", ChatColor.GOLD.toString());
+        String primaryColor = plugin.config.getMessage("PrimaryColor");
+        String secondaryColor = plugin.config.getMessage("SecondaryColor");
         String message = s.replace("&p", primaryColor).replace("&s", secondaryColor);
         return ChatColor.translateAlternateColorCodes('&', message);
     }

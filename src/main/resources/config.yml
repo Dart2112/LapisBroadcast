@@ -1,9 +1,5 @@
-# You can use &p or &s that will be replaced with these when the messages are sent
-PrimaryColor: '&9'
-SecondaryColor: '&6'
-
-# The prefix to be sent in front of every message
-Prefix: "&s[&pLapisBroadcast&s] "
+# Don't change this unless you want to reset the information in here
+ConfigVersion: 1
 
 #Time between messages in minutes, this can be a decimal like 0.1 for every 6 seconds. It is only precise to the second
 Delay: 2
@@ -16,9 +12,5 @@ RandomOrder: false
 
 # Note that this will not fill in Placeholder API variables as they require a player
 ConsoleLog: false
-
-# These are the messages that will be sent to players, here is where you can use Placeholder API tags
-Messages:
-  - "&pThis is a default message in a broadcast plugin"
-  - "&pThis is another message"
-  - "&pThis is yet another message"
+# This should be enabled if your console doesn't support colors, this only applies to console
+StripColor: false

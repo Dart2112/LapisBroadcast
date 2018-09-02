@@ -1,20 +1,22 @@
 package net.lapismc.lapisbroadcast;
 
+import net.lapismc.lapisbroadcast.commands.LapisBroadcastCommand;
 import net.lapismc.lapisbroadcast.utils.LapisBroadcastFileWatcher;
 import net.lapismc.lapisbroadcast.utils.Metrics;
-import org.bukkit.Bukkit;
-import org.bukkit.plugin.java.JavaPlugin;
+import net.lapismc.lapiscore.LapisCoreConfiguration;
+import net.lapismc.lapiscore.LapisCorePlugin;
 
-public final class LapisBroadcast extends JavaPlugin {
+public final class LapisBroadcast extends LapisCorePlugin {
 
     public BroadcastService service;
 
     @Override
     public void onEnable() {
-        saveDefaultConfig();
+        registerConfiguration(new LapisCoreConfiguration(this, 1, 1));
         service = new BroadcastService(this);
+        new LapisBroadcastCommand(this);
         new Metrics(this);
-        Bukkit.getScheduler().runTaskAsynchronously(this, new LapisBroadcastFileWatcher(this));
+        new LapisBroadcastFileWatcher(this);
         getLogger().info(getDescription().getName() + " v." + getDescription().getVersion() + " has been enabled");
     }
 
