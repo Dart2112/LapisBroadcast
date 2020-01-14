@@ -2,8 +2,6 @@ package net.lapismc.lapisbroadcast.commands;
 
 import net.lapismc.lapisbroadcast.LapisBroadcast;
 import net.lapismc.lapiscore.LapisCoreCommand;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -29,10 +27,8 @@ public class LapisBroadcastCommand extends LapisCoreCommand {
             }
         }
         if (args.length > 0) {
-            String message = ChatColor.translateAlternateColorCodes('&',
-                    getMessage(new ArrayList<>(Arrays.asList(args))));
-            String toBroadcast = plugin.config.getMessage("Prefix") + message;
-            Bukkit.broadcastMessage(toBroadcast);
+            String message = getMessage(new ArrayList<>(Arrays.asList(args)));
+            plugin.service.sendMessage(message);
         } else {
             sendMessage(sender, "Error.NoArguments");
         }

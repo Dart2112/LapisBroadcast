@@ -1,10 +1,10 @@
 package net.lapismc.lapisbroadcast;
 
 import net.lapismc.lapisbroadcast.commands.LapisBroadcastCommand;
-import net.lapismc.lapisbroadcast.utils.LapisBroadcastFileWatcher;
-import net.lapismc.lapisbroadcast.utils.Metrics;
 import net.lapismc.lapiscore.LapisCoreConfiguration;
 import net.lapismc.lapiscore.LapisCorePlugin;
+import net.lapismc.lapiscore.utils.LapisCoreFileWatcher;
+import net.lapismc.lapiscore.utils.Metrics;
 
 public final class LapisBroadcast extends LapisCorePlugin {
 
@@ -16,7 +16,7 @@ public final class LapisBroadcast extends LapisCorePlugin {
         service = new BroadcastService(this);
         new LapisBroadcastCommand(this);
         new Metrics(this);
-        new LapisBroadcastFileWatcher(this);
+        new LapisCoreFileWatcher(this);
         getLogger().info(getDescription().getName() + " v." + getDescription().getVersion() + " has been enabled");
     }
 
