@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Copy to server" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="854a3e29-a592-4bda-b3a3-34f294aa4db5" name="Default" comment="Update 1.0.0&#10;Updated LapisCore to 1.7.5&#10;Removed duplicated classes from newer LapisCore&#10;Code cleanup&#10;Issue #1" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PREVIEW_PUSH_ON_COMMIT_AND_PUSH" value="false" />
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WKpTUG25s8qBmATSzCrerhxnly" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535877244199" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Spigot/Spigot.jar" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\benja\IdeaProjects\LapisBroadcast\src\main\java\net\lapismc\lapisbroadcast\utils" />
+      <recent name="C:\Users\benja\IdeaProjects\LapisBroadcast\src\main\java\net\lapismc\lapisbroadcast" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Maven.LapisBroadcast build">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Spigot Test Server" type="JarApplication" singleton="true">
+      <option name="JAR_PATH" value="$USER_HOME$/Documents/Spigot/Spigot.jar" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documents/Spigot/" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <method v="2">
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Copy to server" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="LapisBroadcast build" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JAR Application.Spigot Test Server" />
+      <item itemvalue="Maven.LapisBroadcast build" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="854a3e29-a592-4bda-b3a3-34f294aa4db5" name="Default" comment="" />
+      <created>1532485457122</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1532485457122</updated>
+      <workItem from="1532485479961" duration="2949000" />
+      <workItem from="1532504289755" duration="4116000" />
+      <workItem from="1532524575117" duration="185000" />
+      <workItem from="1532579628898" duration="657000" />
+      <workItem from="1532580644690" duration="260000" />
+      <workItem from="1532752139091" duration="3764000" />
+      <workItem from="1532756820631" duration="268000" />
+      <workItem from="1535874779678" duration="2445000" />
+      <workItem from="1536023242521" duration="8000" />
+      <workItem from="1578908171410" duration="612000" />
+      <workItem from="1578914074419" duration="167000" />
+      <workItem from="1578992273053" duration="389000" />
+      <workItem from="1578993841492" duration="937000" />
+    </task>
+    <task id="LOCAL-00001" summary="Ready for release">
+      <created>1532509034646</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1532509034646</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added a wait for players option to pause announcements while there are no players online&#10;this required the messing service be moved off the main thread">
+      <created>1532752823051</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1532752823051</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix to thread waiting">
+      <created>1532753404447</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1532753404447</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Moved away from Bukkit runnable to allow fixed delay between executions">
+      <created>1532755812927</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1532755812927</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Ready for release&#10;Added command&#10;Moved to LapisCore&#10;Made waiting for players more dynamic on config changes">
+      <created>1535877281054</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1535877281057</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update 1.0.0&#10;Updated LapisCore to 1.7.5&#10;Removed duplicated classes from newer LapisCore&#10;Code cleanup&#10;Issue #1">
+      <created>1578994706466</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1578994706466</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Ready for release" />
+    <MESSAGE value="Added a wait for players option to pause announcements while there are no players online&#10;this required the messing service be moved off the main thread" />
+    <MESSAGE value="fix to thread waiting" />
+    <MESSAGE value="Moved away from Bukkit runnable to allow fixed delay between executions" />
+    <MESSAGE value="Ready for release&#10;Added command&#10;Moved to LapisCore&#10;Made waiting for players more dynamic on config changes" />
+    <MESSAGE value="Update 1.0.0&#10;Updated LapisCore to 1.7.5&#10;Removed duplicated classes from newer LapisCore&#10;Code cleanup&#10;Issue #1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 1.0.0&#10;Updated LapisCore to 1.7.5&#10;Removed duplicated classes from newer LapisCore&#10;Code cleanup&#10;Issue #1" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="418" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578992480375">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="418" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1578992480375" />
+    <state x="2461" y="89" width="827" height="864" key="CommitChangelistDialog2" timestamp="1578994706136">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2461" y="89" width="827" height="864" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578994706136" />
+    <state x="743" y="282" width="424" height="479" key="FileChooserDialogImpl" timestamp="1578992455256">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="743" y="282" width="424" height="479" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1578992455256" />
+    <state width="1878" height="278" key="GridCell.Tab.0.bottom" timestamp="1578994777564">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1578992661813" />
+    <state width="1878" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578994777564" />
+    <state width="1878" height="278" key="GridCell.Tab.0.center" timestamp="1578994777563">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="278" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1578992661813" />
+    <state width="1878" height="278" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578994777563" />
+    <state width="1878" height="278" key="GridCell.Tab.0.left" timestamp="1578994777563">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="278" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1578992661812" />
+    <state width="1878" height="278" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578994777563" />
+    <state width="1878" height="278" key="GridCell.Tab.0.right" timestamp="1578994777564">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="278" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1578992661813" />
+    <state width="1878" height="278" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578994777564" />
+    <state x="443" y="101" width="1024" height="840" key="SettingsEditor" timestamp="1578992491777">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="443" y="101" width="1024" height="840" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1578992491777" />
+    <state x="2575" y="318" width="610" height="406" key="git4idea.merge.GitPullDialog" timestamp="1578908179536">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2575" y="318" width="610" height="406" key="git4idea.merge.GitPullDialog/0.0.1920.1050/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578908179536" />
+  </component>
+</project>
