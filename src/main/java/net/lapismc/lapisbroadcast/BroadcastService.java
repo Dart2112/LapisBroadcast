@@ -15,12 +15,12 @@ import java.util.concurrent.TimeUnit;
 
 public class BroadcastService {
 
+    private final LapisBroadcast plugin;
+    private final Random random = new Random(System.currentTimeMillis());
     private String prefix;
     private ScheduledFuture task;
-    private LapisBroadcast plugin;
     private Integer messageIndex = 0;
     private List<String> messages = new ArrayList<>();
-    private Random random = new Random(System.currentTimeMillis());
 
     BroadcastService(LapisBroadcast plugin) {
         this.plugin = plugin;

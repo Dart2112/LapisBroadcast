@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'maven'
+    id "com.github.johnrengelman.shadow" version "5.2.0"
+}
+
+group = 'net.lapimc'
+archivesBaseName = "LapisBroadcast"
+version = '1.0.1'
+
+sourceCompatibility = '11'
+targetCompatibility = '11'
+defaultTasks 'clean', 'build', 'shadowJar'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        name = 'spigotmc-repo'
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+    }
+}
+
+dependencies {
+    compile 'net.lapismc:LapisCore:1.8.2'
+    compileOnly 'org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT'
+}
+
+shadowJar {
+    archiveFileName.set(archivesBaseName + ".jar")
+    exclude 'javax/**'
+    relocate("net.lapismc.lapiscore", "net.lapismc.arrowping.util.core")
+}
+
+processResources {
+    filter {
+        it.replace('${project.version}', project.getVersion())
+    }
+}

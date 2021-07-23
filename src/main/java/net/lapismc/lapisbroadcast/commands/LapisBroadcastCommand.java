@@ -1,7 +1,7 @@
 package net.lapismc.lapisbroadcast.commands;
 
 import net.lapismc.lapisbroadcast.LapisBroadcast;
-import net.lapismc.lapiscore.LapisCoreCommand;
+import net.lapismc.lapiscore.commands.LapisCoreCommand;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -11,7 +11,7 @@ import java.util.Collections;
 
 public class LapisBroadcastCommand extends LapisCoreCommand {
 
-    private LapisBroadcast plugin;
+    private final LapisBroadcast plugin;
 
     public LapisBroadcastCommand(LapisBroadcast core) {
         super(core, "lapisbroadcast", "Broadcast a message", new ArrayList<>(Collections.singletonList("lb")));
