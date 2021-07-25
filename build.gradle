@@ -6,7 +6,7 @@ plugins {
 
 group = 'net.lapimc'
 archivesBaseName = "LapisBroadcast"
-version = '1.0.1'
+version = '1.0.2'
 
 sourceCompatibility = '11'
 targetCompatibility = '11'
@@ -29,7 +29,7 @@ dependencies {
 shadowJar {
     archiveFileName.set(archivesBaseName + ".jar")
     exclude 'javax/**'
-    relocate("net.lapismc.lapiscore", "net.lapismc.arrowping.util.core")
+    relocate("net.lapismc.lapiscore", "net.lapismc.lapisbroadcast.core")
 }
 
 processResources {
