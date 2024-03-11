@@ -9,17 +9,20 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="854a3e29-a592-4bda-b3a3-34f294aa4db5" name="Default" comment="Added idea files for easy import on other systems">
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__me_clip_placeholderapi_2_10_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_15_1_R0_1_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_15_1_R0_1_SNAPSHOT.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="854a3e29-a592-4bda-b3a3-34f294aa4db5" name="Default" comment="Update 1.0.2&#10;Fixed LapisCore relocation path">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/LapisBroadcastConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/commands/tabcomplete/BroadcastMessageOption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/commands/tabcomplete/ReloadOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/LapisBroadcast.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/LapisBroadcast.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LapisBroadcast.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LapisBroadcast.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/BroadcastService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/BroadcastService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/LapisBroadcast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/LapisBroadcast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/commands/LapisBroadcastCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/commands/LapisBroadcastCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,34 +65,48 @@
     <option name="PREVIEW_PUSH_ON_COMMIT_AND_PUSH" value="false" />
     <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="downloadDocsAutomatically" value="true" />
         <option name="downloadSourcesAutomatically" value="true" />
+        <option name="workspaceImportForciblyTurnedOn" value="true" />
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
   <component name="ProjectId" id="1WKpTUG25s8qBmATSzCrerhxnly" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535877244199" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Spigot/Spigot.jar" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build LapisBroadcast.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/benja/IdeaProjects/LapisBroadcast",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\benja\IdeaProjects\LapisBroadcast\src\main\java\net\lapismc\lapisbroadcast\utils" />
@@ -103,12 +120,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -116,6 +127,12 @@
         </value>
       </option>
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -149,6 +166,14 @@
       </list>
     </option>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-11.0.21-corretto-11.0.21-4caba194b151-9f4ef98c" />
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -175,7 +200,13 @@
       <workItem from="1578993841492" duration="937000" />
       <workItem from="1579256635722" duration="90000" />
       <workItem from="1585189323264" duration="28000" />
-      <workItem from="1627020653143" duration="209000" />
+      <workItem from="1627020653143" duration="426000" />
+      <workItem from="1627188375183" duration="40000" />
+      <workItem from="1627188506309" duration="179000" />
+      <workItem from="1684381896115" duration="496000" />
+      <workItem from="1684382403142" duration="585000" />
+      <workItem from="1689855517935" duration="45000" />
+      <workItem from="1710126844427" duration="3333000" />
     </task>
     <task id="LOCAL-00001" summary="Ready for release">
       <created>1532509034646</created>
@@ -226,7 +257,21 @@
       <option name="project" value="LOCAL" />
       <updated>1579256661135</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update 1.0.1&#10;Update to latest LapisCore and Spigot&#10;Upgrade to Gradle">
+      <created>1627021057105</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1627021057105</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update 1.0.2&#10;Fixed LapisCore relocation path">
+      <created>1627188603968</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1627188603968</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +289,9 @@
     <MESSAGE value="Ready for release&#10;Added command&#10;Moved to LapisCore&#10;Made waiting for players more dynamic on config changes" />
     <MESSAGE value="Update 1.0.0&#10;Updated LapisCore to 1.7.5&#10;Removed duplicated classes from newer LapisCore&#10;Code cleanup&#10;Issue #1" />
     <MESSAGE value="Added idea files for easy import on other systems" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added idea files for easy import on other systems" />
+    <MESSAGE value="Update 1.0.1&#10;Update to latest LapisCore and Spigot&#10;Upgrade to Gradle" />
+    <MESSAGE value="Update 1.0.2&#10;Fixed LapisCore relocation path" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 1.0.2&#10;Fixed LapisCore relocation path" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

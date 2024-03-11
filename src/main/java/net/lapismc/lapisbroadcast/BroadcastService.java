@@ -4,21 +4,19 @@ import net.lapismc.lapiscore.placeholder.PlaceholderAPIHook;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
+import org.bukkit.entity.Player;
+import org.bukkit.scheduler.BukkitTask;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
 
 public class BroadcastService {
 
     private final LapisBroadcast plugin;
     private final Random random = new Random(System.currentTimeMillis());
     private String prefix;
-    private ScheduledFuture task;
+    private BukkitTask task;
     private Integer messageIndex = 0;
     private List<String> messages = new ArrayList<>();
 
@@ -35,7 +33,7 @@ public class BroadcastService {
 
     void stopService() {
         if (task != null) {
-            task.cancel(false);
+            task.cancel();
         }
     }
 
@@ -45,23 +43,24 @@ public class BroadcastService {
     }
 
     private void startRunnable() {
-        double delay = plugin.getConfig().getDouble("Delay", 2) * 60;
+        double delay = plugin.getConfig().getDouble("Delay", 2);
         if (task != null) {
-            task.cancel(false);
+            task.cancel();
         }
-        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
-        task = scheduler.scheduleWithFixedDelay(getRunnable(), 0L, (long) delay, TimeUnit.SECONDS);
+        long delayTicks = (long) (delay * 60 * 20);
+        task = Bukkit.getScheduler().runTaskTimerAsynchronously(plugin, getRunnable(), delayTicks, delayTicks);
     }
 
     private Runnable getRunnable() {
         return () -> {
-            while (Bukkit.getOnlinePlayers().size() == 0 && plugin.getConfig().getBoolean("WaitForPlayers")) {
+            double delay = plugin.getConfig().getDouble("Delay", 2) * 60;
+            while (Bukkit.getOnlinePlayers().isEmpty() && plugin.getConfig().getBoolean("WaitForPlayers")) {
                 try {
-                    Thread.sleep(1000 * 2);
+                    Thread.sleep((long) (1000 * delay));
                 } catch (InterruptedException ignored) {
                 }
             }
-            if (messages.size() == 0)
+            if (messages.isEmpty())
                 return;
             String message;
             if (plugin.getConfig().getBoolean("RandomOrder")) {
@@ -92,7 +91,9 @@ public class BroadcastService {
                 if (Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) {
                     broadcast = PlaceholderAPIHook.processPlaceholders(op, broadcast);
                 }
-                op.getPlayer().sendMessage(broadcast);
+                Player p = op.getPlayer();
+                if (p != null)
+                    p.sendMessage(broadcast);
             }
         }
     }

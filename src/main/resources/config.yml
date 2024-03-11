@@ -7,7 +7,7 @@ Delay: 2
 # Should the plugin pause announcements while no players are online
 WaitForPlayers: true
 
-# If true the messages will be send in a random order, if false they will be sent top to bottom then repeat
+# If true the messages will be sent in a random order, if false they will be sent top to bottom then repeat
 RandomOrder: false
 
 # Note that this will not fill in Placeholder API variables as they require a player
