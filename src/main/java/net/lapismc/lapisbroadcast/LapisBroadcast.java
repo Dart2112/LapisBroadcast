@@ -28,11 +28,4 @@ public final class LapisBroadcast extends LapisCorePlugin {
         if (service != null)
             service.reloadService();
     }
-
-    @Override
-    public void onDisable() {
-        service.stopService();
-        fileWatcher.stop();
-        getLogger().info(getDescription().getName() + " has been disabled");
-    }
 }

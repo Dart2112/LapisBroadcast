@@ -31,12 +31,6 @@ public class BroadcastService {
         startRunnable();
     }
 
-    void stopService() {
-        if (task != null) {
-            task.cancel();
-        }
-    }
-
     private void loadMessages() {
         prefix = plugin.config.getMessage("Prefix");
         messages = plugin.config.getMessages().getStringList("Messages");
@@ -46,9 +40,11 @@ public class BroadcastService {
         double delay = plugin.getConfig().getDouble("Delay", 2);
         if (task != null) {
             task.cancel();
+            plugin.tasks.removeTask(task);
         }
         long delayTicks = (long) (delay * 60 * 20);
         task = Bukkit.getScheduler().runTaskTimerAsynchronously(plugin, getRunnable(), delayTicks, delayTicks);
+        plugin.tasks.addTask(task);
     }
 
     private Runnable getRunnable() {

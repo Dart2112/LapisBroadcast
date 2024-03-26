@@ -9,20 +9,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="854a3e29-a592-4bda-b3a3-34f294aa4db5" name="Default" comment="Update 1.0.2&#10;Fixed LapisCore relocation path">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/LapisBroadcastConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/commands/tabcomplete/BroadcastMessageOption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/commands/tabcomplete/ReloadOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/LapisBroadcast.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/LapisBroadcast.main.iml" afterDir="false" />
+    <list default="true" id="854a3e29-a592-4bda-b3a3-34f294aa4db5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/BroadcastService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/BroadcastService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/LapisBroadcast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/LapisBroadcast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/commands/LapisBroadcastCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/commands/LapisBroadcastCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,10 +68,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="1WKpTUG25s8qBmATSzCrerhxnly" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -90,6 +81,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Build LapisBroadcast.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -166,14 +158,6 @@
       </list>
     </option>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-11.0.21-corretto-11.0.21-4caba194b151-9f4ef98c" />
-        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -206,7 +190,9 @@
       <workItem from="1684381896115" duration="496000" />
       <workItem from="1684382403142" duration="585000" />
       <workItem from="1689855517935" duration="45000" />
-      <workItem from="1710126844427" duration="3333000" />
+      <workItem from="1710126844427" duration="3568000" />
+      <workItem from="1711356490649" duration="541000" />
+      <workItem from="1711428421063" duration="1074000" />
     </task>
     <task id="LOCAL-00001" summary="Ready for release">
       <created>1532509034646</created>
@@ -271,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1627188603968</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update 1.1.0&#10;Updated to latest LapisCore and Spigot&#10;Updated to JDK 17&#10;Added auto reload functionality to the broadcast service, this means config changes are applied instantly&#10;Added tab completion to the /lb command&#10;Added /lb reload command in case the auto reload fails&#10;Switched to BukkitScheduler for running the service">
+      <option name="closed" value="true" />
+      <created>1710130346591</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1710130346591</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +285,9 @@
     <MESSAGE value="Added idea files for easy import on other systems" />
     <MESSAGE value="Update 1.0.1&#10;Update to latest LapisCore and Spigot&#10;Upgrade to Gradle" />
     <MESSAGE value="Update 1.0.2&#10;Fixed LapisCore relocation path" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 1.0.2&#10;Fixed LapisCore relocation path" />
+    <MESSAGE value="Update 1.1.0&#10;Updated to latest LapisCore and Spigot&#10;Added auto reload functionality to the broadcast service, this means config changes are applied instantly&#10;Added tab completion to the /lb command&#10;Added /lb reload command in case the auto reload fails&#10;Switched to BukkitScheduler for running the service" />
+    <MESSAGE value="Update 1.1.0&#10;Updated to latest LapisCore and Spigot&#10;Updated to JDK 17&#10;Added auto reload functionality to the broadcast service, this means config changes are applied instantly&#10;Added tab completion to the /lb command&#10;Added /lb reload command in case the auto reload fails&#10;Switched to BukkitScheduler for running the service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 1.1.0&#10;Updated to latest LapisCore and Spigot&#10;Updated to JDK 17&#10;Added auto reload functionality to the broadcast service, this means config changes are applied instantly&#10;Added tab completion to the /lb command&#10;Added /lb reload command in case the auto reload fails&#10;Switched to BukkitScheduler for running the service" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
