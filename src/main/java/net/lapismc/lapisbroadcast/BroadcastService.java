@@ -39,6 +39,8 @@ public class BroadcastService {
     private void startRunnable() {
         double delay = plugin.getConfig().getDouble("Delay", 2);
         if (task != null) {
+            //If the task already exists, we must be reloading
+            //So we cancel the task and remove it from the task list so that a new task can be generated
             task.cancel();
             plugin.tasks.removeTask(task);
         }
@@ -49,15 +51,16 @@ public class BroadcastService {
 
     private Runnable getRunnable() {
         return () -> {
-            double delay = plugin.getConfig().getDouble("Delay", 2) * 60;
-            while (Bukkit.getOnlinePlayers().isEmpty() && plugin.getConfig().getBoolean("WaitForPlayers")) {
-                try {
-                    Thread.sleep((long) (1000 * delay));
-                } catch (InterruptedException ignored) {
-                }
+            //If there are no players online, and we should wait for players, simply return
+            //This is so that the next announcement successfully made isn't stacked
+            if (Bukkit.getOnlinePlayers().isEmpty() && plugin.getConfig().getBoolean("WaitForPlayers")) {
+                return;
             }
+            //If we have no messages to send, return
+            //This might happen if the config reloads unsuccessfully
             if (messages.isEmpty())
                 return;
+            //Fetch either a random message or the next message in the order
             String message;
             if (plugin.getConfig().getBoolean("RandomOrder")) {
                 message = messages.get(random.nextInt(messages.size()));
@@ -68,6 +71,7 @@ public class BroadcastService {
                 message = messages.get(messageIndex);
                 messageIndex++;
             }
+            //Process and send out the message
             sendMessage(message);
         };
     }

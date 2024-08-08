@@ -10,10 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="854a3e29-a592-4bda-b3a3-34f294aa4db5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/LapisBroadcast.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/LapisBroadcast.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/BroadcastService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/BroadcastService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/LapisBroadcast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lapismc/lapisbroadcast/LapisBroadcast.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,6 @@
       <MavenImportingSettings>
         <option name="downloadDocsAutomatically" value="true" />
         <option name="downloadSourcesAutomatically" value="true" />
-        <option name="workspaceImportForciblyTurnedOn" value="true" />
       </MavenImportingSettings>
     </option>
   </component>
@@ -78,27 +77,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build LapisBroadcast.executor": "Run",
-    "Gradle.Download Sources.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/benja/IdeaProjects/LapisBroadcast",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build LapisBroadcast.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/benja/IdeaProjects/LapisBroadcast&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\benja\IdeaProjects\LapisBroadcast\src\main\java\net\lapismc\lapisbroadcast\utils" />
@@ -158,6 +157,14 @@
       </list>
     </option>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.300" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.300" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -192,7 +199,10 @@
       <workItem from="1689855517935" duration="45000" />
       <workItem from="1710126844427" duration="3568000" />
       <workItem from="1711356490649" duration="541000" />
-      <workItem from="1711428421063" duration="1074000" />
+      <workItem from="1711428421063" duration="1371000" />
+      <workItem from="1721871482698" duration="52000" />
+      <workItem from="1721871663255" duration="377000" />
+      <workItem from="1723084830457" duration="326000" />
     </task>
     <task id="LOCAL-00001" summary="Ready for release">
       <created>1532509034646</created>
@@ -265,7 +275,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710130346591</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fixed Nag&#10;Fixed task not being canceled on shutdown causing console nag">
+      <option name="closed" value="true" />
+      <created>1711429712594</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711429712594</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +305,8 @@
     <MESSAGE value="Update 1.0.2&#10;Fixed LapisCore relocation path" />
     <MESSAGE value="Update 1.1.0&#10;Updated to latest LapisCore and Spigot&#10;Added auto reload functionality to the broadcast service, this means config changes are applied instantly&#10;Added tab completion to the /lb command&#10;Added /lb reload command in case the auto reload fails&#10;Switched to BukkitScheduler for running the service" />
     <MESSAGE value="Update 1.1.0&#10;Updated to latest LapisCore and Spigot&#10;Updated to JDK 17&#10;Added auto reload functionality to the broadcast service, this means config changes are applied instantly&#10;Added tab completion to the /lb command&#10;Added /lb reload command in case the auto reload fails&#10;Switched to BukkitScheduler for running the service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 1.1.0&#10;Updated to latest LapisCore and Spigot&#10;Updated to JDK 17&#10;Added auto reload functionality to the broadcast service, this means config changes are applied instantly&#10;Added tab completion to the /lb command&#10;Added /lb reload command in case the auto reload fails&#10;Switched to BukkitScheduler for running the service" />
+    <MESSAGE value="Fixed Nag&#10;Fixed task not being canceled on shutdown causing console nag" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Nag&#10;Fixed task not being canceled on shutdown causing console nag" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

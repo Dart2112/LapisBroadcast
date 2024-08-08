@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IdeaProjects.LapisBroadcast.main.iml" filepath="$PROJECT_DIR$/.idea/modules/IdeaProjects.LapisBroadcast.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/LapisBroadcast.main.iml" filepath="$PROJECT_DIR$/.idea/modules/LapisBroadcast.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/benja.IdeaProjects.LapisBroadcast.main.iml" filepath="$PROJECT_DIR$/.idea/modules/benja.IdeaProjects.LapisBroadcast.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/net.lapismc.LapisBroadcast.main.iml" filepath="$PROJECT_DIR$/.idea/modules/net.lapismc.LapisBroadcast.main.iml" />
     </modules>
   </component>
