@@ -1,14 +1,14 @@
-# Don't change this unless you want to reset the information in here
+#Don't change this unless you want to reset the information in here
 ConfigVersion: 2
 
-# You can use &p or &s that will be replaced with these when the messages are sent
+#You can use &p or &s that will be replaced with these when the messages are sent
 PrimaryColor: '&9'
 SecondaryColor: '&6'
 
-# The prefix to be sent in front of every message
+#The prefix to be sent in front of every message
 Prefix: "&s[&pLapisBroadcast&s] "
 
-# These are the messages that will be sent to players, here is where you can use Placeholder API tags
+#These are the messages that will be sent to players, here is where you can use Placeholder API tags
 Messages:
   - "&pThis is a default message in a broadcast plugin"
   - "&pThis is another message"

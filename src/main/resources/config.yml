@@ -1,16 +1,17 @@
-# Don't change this unless you want to reset the information in here
+#Don't change this unless you want to reset the information in here
 ConfigVersion: 1
 
-#Time between messages in minutes, this can be a decimal like 0.1 for every 6 seconds. It is only precise to the second
+#Time between messages in minutes, this can be a decimal like 0.1 for every 6 seconds.
 Delay: 2
 
-# Should the plugin pause announcements while no players are online
+#Should the plugin pause announcements while no players are online
 WaitForPlayers: true
 
-# If true the messages will be sent in a random order, if false they will be sent top to bottom then repeat
+#If true the messages will be sent in a random order, if false they will be sent top to bottom then repeat
 RandomOrder: false
 
-# Note that this will not fill in Placeholder API variables as they require a player
+#Should messages also be sent to the console log
+#Note that this will not fill in Placeholder API variables as they require a player
 ConsoleLog: false
-# This should be enabled if your console doesn't support colors, this only applies to console
+#This should be enabled if your console doesn't support colors, this only applies to console
 StripColor: false
